@@ -1,10 +1,9 @@
-var VideoList = () => (
+// import example video data
+import VideoListEntry from './VideoListEntry.js';
+//props.videos
+var VideoList = ({videos}) => (
   <div className="video-list">
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
-    <div><h5><em>videoListEntry</em> view goes here</h5></div>
+    {videos.map((element, index) => (<VideoListEntry video={ element } key={ element.id.videoId } />))}
   </div>
 );
 
